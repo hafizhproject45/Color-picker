@@ -4,20 +4,16 @@ const tombol = document.querySelector('#tombol');
 tombol.addEventListener('click', () => {
     // document.body.style.backgroundColor = 'lightblue';
     // document.body.setAttribute('class', 'biru-muda');
-    document.body.classList.toggle('biru-muda')
+    document.body.classList.toggle('warnaDefault')
 })
-// tambah button
+// tambah button random color picker
 const bRandom = document.createElement('button');
 const bIsi = document.createTextNode('Acak Warna');
 bRandom.appendChild(bIsi);
 bRandom.setAttribute('type', 'button');
 tombol.after(bRandom);
 
-const cPick = document.createElement('button');
-const cIsi = document.createTextNode('Warna Cursor');
-cPick.appendChild(cIsi);
-cPick.setAttribute('type', 'button');
-bRandom.after(cPick);
+document.body.classList.toggle('style');
 
 // random color picker
 bRandom.addEventListener('click', () => {
@@ -54,10 +50,3 @@ sBiru.addEventListener('input', () => {
 
     document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 })
-
-// color picker
-// document.body.addEventListener('mousemove', (event) => {
-//     const xPos = Math.round((event.clientX / window.innerWidth) * 255);
-//     const yPos = Math.round((event.clientY / window.innerHeight) * 255);
-//     document.body.style.backgroundColor = 'rgb(' + xPos + ',' + yPos + ',100)';
-// })
